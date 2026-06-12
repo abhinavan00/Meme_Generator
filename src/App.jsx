@@ -13,11 +13,24 @@ function App() {
       </header>
       <main>
         <form>
-          <input 
-            type='text'
-            name='top-text'
-            placeholder='Top Text...'
-          />
+          <div>
+            <label for='top-text'>Top Text</label>
+            <input 
+              type='text'
+              id='top-text'
+              name='top-text'
+              placeholder='Top Text...'
+            />
+          </div>
+          <div>
+            <label for='bottom-text'>Bottom Text</label>
+            <input 
+              type='text'
+              id='bottom-text'
+              name='bottom-text'
+              placeholder='Bottom Text...'
+            />
+          </div>
         </form>
       </main>
     </>
