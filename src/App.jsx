@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import logo from './assets/logo.svg'
 import './App.css'
 
 function App() {
@@ -6,7 +7,19 @@ function App() {
 
   return (
     <>
-      
+      <header>
+        <img src={logo} alt='troll face icon' />
+        <p>Meme Generator</p>
+      </header>
+      <main>
+        <form>
+          <input 
+            type='text'
+            name='top-text'
+            placeholder='Top Text...'
+          />
+        </form>
+      </main>
     </>
   )
 }
