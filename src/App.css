@@ -22,13 +22,13 @@ main {
   max-width: 550px;
 }
 
-.input-fields {
+.input-fields-container {
   display: flex;
   justify-content: space-around; 
   margin: 1em 0; 
 }
 
-.top-text-div, .bottom-text-div {
+.input-fields-container div {
   display: flex;
   flex-direction: column;
   gap: 0.4em 0;

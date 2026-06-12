@@ -13,8 +13,8 @@ function App() {
       </header>
       <main>
         <form>
-          <div className='input-fields'>
-            <div className='top-text-div'>
+          <div className='input-fields-container'>
+            <div>
               <label for='top-text'>Top Text</label>
               <input 
                 type='text'
@@ -23,7 +23,7 @@ function App() {
                 placeholder='Top Text...'
               />
             </div>
-            <div className='bottom-text-div'>
+            <div>
               <label for='bottom-text'>Bottom Text</label>
               <input 
                 type='text'
