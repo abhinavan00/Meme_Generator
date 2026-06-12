@@ -13,24 +13,27 @@ function App() {
       </header>
       <main>
         <form>
-          <div>
-            <label for='top-text'>Top Text</label>
-            <input 
-              type='text'
-              id='top-text'
-              name='top-text'
-              placeholder='Top Text...'
-            />
+          <div className='input-fields'>
+            <div className='top-text-div'>
+              <label for='top-text'>Top Text</label>
+              <input 
+                type='text'
+                id='top-text'
+                name='top-text'
+                placeholder='Top Text...'
+              />
+            </div>
+            <div className='bottom-text-div'>
+              <label for='bottom-text'>Bottom Text</label>
+              <input 
+                type='text'
+                id='bottom-text'
+                name='bottom-text'
+                placeholder='Bottom Text...'
+              />
+            </div>
           </div>
-          <div>
-            <label for='bottom-text'>Bottom Text</label>
-            <input 
-              type='text'
-              id='bottom-text'
-              name='bottom-text'
-              placeholder='Bottom Text...'
-            />
-          </div>
+          <button type='submit'>GET A NEW MEME IMAGE  🖼</button>
         </form>
       </main>
     </>
