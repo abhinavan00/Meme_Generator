@@ -37,8 +37,6 @@ function App() {
         }
       )
     })
-
-    console.log(meme)
   }
 
   return (

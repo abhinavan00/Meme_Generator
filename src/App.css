@@ -79,6 +79,12 @@ form button {
   padding: .65em 0;
   align-self: center;
   cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+form button:active {
+  transform: scale(0.95);
+  box-shadow: none;
 }
 
 /* MEME IMAGE SECTION */
