@@ -25,7 +25,6 @@ main {
 }
 
 /* FORM SECTION */
-
 form {
   display: flex;
   flex-direction: column;
@@ -51,8 +50,16 @@ form label {
 }
 
 form input {
+  font-family: inherit;
+  font-weight: bold;
+  color: #374151;
   padding: .75em;
   border: .15em solid black;
+}
+
+form input:focus {
+  outline: .15em solid #E63946;
+  border: none;
 }
 
 form input::placeholder {
