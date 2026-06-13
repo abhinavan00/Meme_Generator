@@ -3,12 +3,16 @@ import logo from './assets/logo.svg'
 import './App.css'
 
 function App() {
-  const [text, setText] = useState('')
+  const [meme, setMeme] = useState({
+    topText: 'One does not Simply',
+    bottomText: 'walk into mordor',
+    imgUrl: 'https://i.imgflip.com/1bij.jpg'
+  })
 
-  function getInputValues(e) {
+  function handleChange(e) {
     const {value, name} = e.currentTarget
 
-    setText(prevText => value)
+    setMeme(prevMeme => ({...prevMeme, [name]:value}))
   }
 
   return (
@@ -25,9 +29,9 @@ function App() {
               <input 
                 type='text'
                 id='top-text'
-                name='top-text'
+                name='topText'
                 placeholder='Top Text...'
-                onChange={getInputValues}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -35,22 +39,22 @@ function App() {
               <input 
                 type='text'
                 id='bottom-text'
-                name='bottom-text'
+                name='bottomText'
                 placeholder='Bottom Text...'
-                onChange={getInputValues}
+                onChange={handleChange}
               />
             </div>
           </div>
           <button type='submit'>GET A NEW MEME IMAGE  🖼</button>
         </form>
         <div className='img-container'>
-          <p className='top-text'>{text}</p>
+          <p className='top-text'>{meme.topText}</p>
           <img 
             src='https://i.imgflip.com/1bij.jpg' 
             alt='One Does Not Simply' 
             className='meme-img'  
           />
-          <p className='bottom-text'>{text}</p>
+          <p className='bottom-text'>{meme.bottomText}</p>
         </div>
       </main>
     </>
