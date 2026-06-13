@@ -35,12 +35,14 @@ function App() {
           </div>
           <button type='submit'>GET A NEW MEME IMAGE  🖼</button>
         </form>
-        <div>
+        <div className='img-container'>
+          <p className='top-text'>One does not Simply</p>
           <img 
             src='https://i.imgflip.com/1bij.jpg' 
             alt='One Does Not Simply' 
             className='meme-img'  
-            />
+          />
+          <p className='bottom-text'>walk into mordor</p>
         </div>
       </main>
     </>
