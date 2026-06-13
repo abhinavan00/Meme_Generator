@@ -26,6 +26,21 @@ function App() {
     setMeme(prevMeme => ({...prevMeme, [name]:value}))
   }
 
+  function getMemeImg() {
+    const randomIndex = Math.floor(Math.random() * allMemes.length)
+
+    setMeme(prevMeme => {
+      return (
+        {
+          ...prevMeme,
+          imgUrl: allMemes[randomIndex].url
+        }
+      )
+    })
+
+    console.log(meme)
+  }
+
   return (
     <>
       <header>
@@ -56,12 +71,12 @@ function App() {
               />
             </div>
           </div>
-          <button type='submit'>GET A NEW MEME IMAGE  🖼</button>
+          <button type='submit' formAction={getMemeImg}>GET A NEW MEME IMAGE  🖼</button>
         </form>
         <div className='img-container'>
           <p className='top-text'>{meme.topText}</p>
           <img 
-            src='https://i.imgflip.com/1bij.jpg' 
+            src={meme.imgUrl}
             alt='One Does Not Simply' 
             className='meme-img'  
           />
