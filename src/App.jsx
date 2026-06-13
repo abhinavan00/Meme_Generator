@@ -3,7 +3,13 @@ import logo from './assets/logo.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [text, setText] = useState('')
+
+  function getInputValues(e) {
+    const {value, name} = e.currentTarget
+
+    setText(prevText => value)
+  }
 
   return (
     <>
@@ -15,34 +21,36 @@ function App() {
         <form>
           <div className='input-fields-container'>
             <div>
-              <label for='top-text'>Top Text</label>
+              <label htmlFor='top-text'>Top Text</label>
               <input 
                 type='text'
                 id='top-text'
                 name='top-text'
                 placeholder='Top Text...'
+                onChange={getInputValues}
               />
             </div>
             <div>
-              <label for='bottom-text'>Bottom Text</label>
+              <label htmlFor='bottom-text'>Bottom Text</label>
               <input 
                 type='text'
                 id='bottom-text'
                 name='bottom-text'
                 placeholder='Bottom Text...'
+                onChange={getInputValues}
               />
             </div>
           </div>
           <button type='submit'>GET A NEW MEME IMAGE  🖼</button>
         </form>
         <div className='img-container'>
-          <p className='top-text'>One does not Simply</p>
+          <p className='top-text'>{text}</p>
           <img 
             src='https://i.imgflip.com/1bij.jpg' 
             alt='One Does Not Simply' 
             className='meme-img'  
           />
-          <p className='bottom-text'>walk into mordor</p>
+          <p className='bottom-text'>{text}</p>
         </div>
       </main>
     </>
