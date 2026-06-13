@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import logo from './assets/logo.svg'
 import './App.css'
 
@@ -8,6 +8,17 @@ function App() {
     bottomText: 'walk into mordor',
     imgUrl: 'https://i.imgflip.com/1bij.jpg'
   })
+
+  const [allMemes, setAllMemes] = useState([])
+
+  useEffect(() => {
+    const fetchMemes = async () => {
+      const res = await fetch('https://api.imgflip.com/get_memes')
+      const data = await res.json()
+      setAllMemes(data.data.memes)
+    }
+    fetchMemes()
+  }, [])
 
   function handleChange(e) {
     const {value, name} = e.currentTarget
