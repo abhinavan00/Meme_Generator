@@ -22,6 +22,11 @@ main {
   max-width: 550px;
 }
 
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .input-fields-container {
   display: flex;
   justify-content: space-around; 
@@ -49,4 +54,18 @@ form input {
 form input::placeholder {
   font-weight: bold;
   letter-spacing: .1em;
+}
+
+form button {
+  font-family: inherit;
+  font-weight: 900;
+  color: white;
+  letter-spacing: .1em;
+  width: 90%;
+  background: #E63946;
+  border: .25em solid black;
+  box-shadow: .3em .3em 0 0 black;
+  padding: .65em 0;
+  align-self: center;
+  cursor: pointer;
 }
